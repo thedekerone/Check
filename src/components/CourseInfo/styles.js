@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-export const Progress = styled.div`
+export const ProgressLine = styled.div`
 	height: .5rem;
 	width: 100%;
-
 	background: darkgray;
 	display: flex;
 	border-radius: 5rem;
@@ -12,17 +11,31 @@ export const Progress = styled.div`
 
 export const GoldProgress = styled.div`
 	height: 100%;
-	width: 30%;
 	background: #efb30c;
+	width: ${(props) => props.percentage}%;
 	position: absolute;
-	z-index: 4;
+	z-index: 3;
 `;
 export const BronzeProgress = styled.div`
 	height: 100%;
-	width: 50%;
 	position: absolute;
 	background: #cc7e48;
+	width: ${(props) => props.percentage}%;
 	z-index: 1;
+`;
+export const SilverProgress = styled.div`
+	height: 100%;
+	position: absolute;
+	background: #a4c1cf;
+	width: ${(props) => props.percentage}%;
+	z-index: 2;
+`;
+export const DiamondProgress = styled.div`
+	height: 100%;
+	position: absolute;
+	background: #50e6ff;
+	width: ${(props) => props.percentage + '%'};
+	z-index: 5;
 `;
 
 export const Title = styled.h1`
